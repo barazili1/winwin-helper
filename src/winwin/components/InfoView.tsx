@@ -33,7 +33,7 @@ const InfoView: React.FC<InfoViewProps> = ({ lang, t, userId, platform, selected
   const [time, setTime] = useState({ h: "00", m: "15", s: "00" });
   const [showUnregisteredModal, setShowUnregisteredModal] = useState(false);
 
-  const platformName = platform === 'megapari' ? "Megapari" : "WINWIN";
+  const platformName = platform === 'paripulse' ? "Paripulse" : "WINWIN";
   const ADMIN_ID = "9827463289";
   const cleanUserId = userId.replace("ADMIN_SESS_PROTOCOL_", "").trim();
   const isAdmin = cleanUserId === ADMIN_ID || userId.startsWith("ADMIN_SESS_PROTOCOL_");

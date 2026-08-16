@@ -23,11 +23,11 @@ const App: React.FC = () => {
   const rawT = translations[lang];
   
   const processTranslations = (obj: any, p: Platform): any => {
-    const platformName = p === 'megapari' ? 'Megapari' : 'WINWIN';
+    const platformName = p === 'paripulse' ? 'Paripulse' : 'WINWIN';
     const newT: any = {};
     for (const key in obj) {
       if (typeof obj[key] === 'string') {
-        newT[key] = obj[key].replace(/1xBet|WINWIN/gi, platformName);
+        newT[key] = obj[key].replace(/(?:1xBet|WINWIN)(?:\s*BET)?/gi, platformName);
       } else {
         newT[key] = obj[key];
       }

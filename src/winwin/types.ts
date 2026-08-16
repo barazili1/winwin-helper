@@ -1,7 +1,7 @@
 
 export type ViewState = 'splash' | 'platform_selection' | 'info' | 'settings';
 
-export type Platform = 'greenbet' | 'megapari';
+export type Platform = 'greenbet' | 'paripulse';
 
 export interface PredictionData {
   multiplier: number;
