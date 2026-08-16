@@ -92,7 +92,7 @@ const InfoView: React.FC<InfoViewProps> = ({ lang, t, userId, platform, selected
     // Random shuffle (Fisher-Yates)
     for (let i = cells.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [cells[i], cells[j]] = [cells[j], cells[i]];
+      [cells[i], cells[j]] = [cells[j]!, cells[i]!];
     }
     
     return cells.slice(0, safeCount);

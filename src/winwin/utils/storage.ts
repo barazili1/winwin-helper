@@ -54,7 +54,7 @@ export const getStoredFlag = (key: string): boolean => {
     const cookies = document.cookie.split(';');
     for (let cookie of cookies) {
       const [cName, cVal] = cookie.trim().split('=');
-      if (decodeURIComponent(cName) === key && decodeURIComponent(cVal) === 'true') {
+      if (decodeURIComponent(cName ?? '') === key && decodeURIComponent(cVal ?? '') === 'true') {
         return true;
       }
     }

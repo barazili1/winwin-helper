@@ -49,7 +49,7 @@ const GemsMinesView: React.FC<GemsMinesViewProps> = ({ lang, t, userId, onRequir
       // Shuffle
       for (let i = allIndices.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [allIndices[i], allIndices[j]] = [allIndices[j], allIndices[i]];
+        [allIndices[i], allIndices[j]] = [allIndices[j]!, allIndices[i]!];
       }
 
       const pickedGems = allIndices.slice(0, selectedGemCount);

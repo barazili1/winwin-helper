@@ -55,10 +55,10 @@ const ParticlesBackground: React.FC = () => {
 
       // Draw lines
       for (let i = 0; i < particles.length; i++) {
-        const p1 = particles[i];
+        const p1 = particles[i]!;
 
         for (let j = i + 1; j < particles.length; j++) {
-          const p2 = particles[j];
+          const p2 = particles[j]!;
           const dx = p1.x - p2.x;
           const dy = p1.y - p2.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
@@ -77,7 +77,7 @@ const ParticlesBackground: React.FC = () => {
 
       // Draw particles
       for (let i = 0; i < particles.length; i++) {
-        const p = particles[i];
+        const p = particles[i]!;
 
         // Move particle
         p.x += p.vx;
