@@ -23,7 +23,7 @@ const App: React.FC = () => {
   const rawT = translations[lang];
   
   const processTranslations = (obj: any, p: Platform): any => {
-    const platformName = p === 'megapari' ? 'Megapari' : 'WINWIN';
+    const platformName = p === 'paripulse' ? 'Paripulse' : 'WINWIN';
     const newT: any = {};
     for (const key in obj) {
       if (typeof obj[key] === 'string') {
