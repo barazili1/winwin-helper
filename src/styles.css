@@ -142,3 +142,84 @@
     color: var(--color-foreground);
   }
 }
+
+/* ===== SMART BET (WinWin) design system ===== */
+@theme {
+  --font-sans: "Chakra Petch", sans-serif;
+  --font-display: "Goldman", cursive;
+  --font-accent: "Michroma", sans-serif;
+  --font-arabic: "Cairo", sans-serif;
+  --font-mono: "Share Tech Mono", monospace;
+
+  --color-brand-blue: #2563eb;
+
+  --color-green-50: #f7fce5;
+  --color-green-100: #eef8be;
+  --color-green-200: #dcf085;
+  --color-green-300: #c5e543;
+  --color-green-400: #a3e600;
+  --color-green-500: #8bcf00;
+  --color-green-600: #74ad00;
+  --color-green-700: #5a8700;
+  --color-green-800: #466902;
+  --color-green-900: #3b5807;
+  --color-green-950: #1e3200;
+
+  --color-emerald-50: #f7fce5;
+  --color-emerald-100: #eef8be;
+  --color-emerald-200: #dcf085;
+  --color-emerald-300: #c5e543;
+  --color-emerald-400: #a3e600;
+  --color-emerald-500: #8bcf00;
+  --color-emerald-600: #74ad00;
+  --color-emerald-700: #5a8700;
+  --color-emerald-800: #466902;
+  --color-emerald-900: #3b5807;
+  --color-emerald-950: #1e3200;
+
+  --animate-glitch: glitch 1s linear infinite;
+  --animate-scan: scan 2s linear infinite;
+  --animate-fade-in-up: fadeInUp 0.5s ease-out forwards;
+  --animate-pulse-fast: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-spin-slow: spin 6s linear infinite;
+
+  @keyframes glitch {
+    2%, 64% { transform: translate(2px, 0) skew(0deg); }
+    4%, 60% { transform: translate(-2px, 0) skew(0deg); }
+    62% { transform: translate(0, 0) skew(5deg); }
+  }
+  @keyframes scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+body {
+  font-family: "Chakra Petch", sans-serif;
+  background-color: #000;
+  color: #e4e4e7;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 0; background: transparent; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: transparent; border: none; }
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@utility hud-text-glow {
+  text-shadow: 0 0 10px rgba(139, 207, 0, 0.5);
+}
+@utility vip-gradient-text {
+  color: #fff;
+  text-shadow: 0 0 15px rgba(139, 207, 0, 0.6);
+}
