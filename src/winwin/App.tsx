@@ -27,7 +27,7 @@ const App: React.FC = () => {
     const newT: any = {};
     for (const key in obj) {
       if (typeof obj[key] === 'string') {
-        newT[key] = obj[key].replace(/1xBet|WINWIN/gi, platformName);
+        newT[key] = obj[key].replace(/(?:1xBet|WINWIN)(?:\s*BET)?/gi, platformName);
       } else {
         newT[key] = obj[key];
       }
