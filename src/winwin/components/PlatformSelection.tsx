@@ -159,7 +159,9 @@ const PlatformSelection: React.FC<PlatformSelectionProps> = ({ onSelect, t }) =>
         clearTimeout(finishTimer);
       };
     }
+    return undefined;
   }, [isConnecting, onSelect, selected, activeSteps]);
+
 
   const handleProceed = () => {
     audioManager.playClick();
